@@ -250,6 +250,8 @@ function upbootwp_breadcrumbs() {
 
 	}
 }
+
+// redesign read more link
 function Bootsy_readmore( $link ) {
 	//$link = preg_replace( '|#more-[0-9]+|', '', $link );
 	$link = '<p>' . str_replace( 'class="more-link', 'class="more-link btn btn-primary btn-sm', $link ) . '</p>';
@@ -279,8 +281,7 @@ function Bootsy_remove_class_filter( $hook_name = '', $class_name ='', $method_n
 
 	return false;
 }
-add_action('show_user_profile', 'Bootsy_social_links_add');
-add_action('personal_options_update', 'Bootsy_social_links_update');
+
 $Bootsy_socials = array(
     'twitter' =>array(
     	'label' => 'Twitter'
@@ -331,6 +332,10 @@ function Bootsy_social_links_update (){
     	update_user_meta($user_ID, $id, $_POST[$id]);
     }
 }
+
+add_action('show_user_profile', 'Bootsy_social_links_add');
+add_action('personal_options_update', 'Bootsy_social_links_update');
+
 function Bootsy_social_links_get ($user_ID){ 
     global $Bootsy_socials;
     $return = '<ul>';
