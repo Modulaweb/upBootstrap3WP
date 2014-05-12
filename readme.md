@@ -12,7 +12,7 @@ By [Modulaweb](http://modulaweb.fr) & [upplex - webdesign](http://upplex.de)
 
 Copy the Folder in your Wordpress theme folder and enable it on the theme page.
 
-**Warning** You need to install the excellent [WordPress Bootstrap CSS]https://wordpress.org/plugins/wordpress-bootstrap-css/) plugin and enable it with latest version of Bootstrap configured to make it to work
+**Warning** You need to install the excellent [WordPress Bootstrap CSS](https://wordpress.org/plugins/wordpress-bootstrap-css/) plugin and enable it with latest version of Bootstrap configured to make it to work
 
 ## Features
 
