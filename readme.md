@@ -2,7 +2,7 @@
 
 Based on https://github.com/upplex/upBootstrap3WP
 
-** Note ** It is designed to follow the Modulaweb look & feel, tweak it a little before to push it in production
+**Note** It is designed to follow the Modulaweb look & feel, tweak it a little before to push it in production
 
 To get started with Bootstrap 3, check out [http://getbootstrap.com](http://getbootstrap.com)!
 
