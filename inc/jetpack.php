@@ -13,8 +13,8 @@
  */
 function upbootwp_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'footer'    => 'page',
+		'container' 	 => 'main',
+		'footer'    	 => false, // disable the default infinite-scroll footer
 	) );
 }
 add_action( 'after_setup_theme', 'upbootwp_jetpack_setup' );

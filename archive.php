@@ -11,8 +11,8 @@
 get_header(); ?>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
-				<section id="primary" class="content-area">
+			<div class="col-md-9">
+				<section id="primary" class="content-area well">
 					<main id="main" class="site-main" role="main">
 			
 					<?php if ( have_posts() ) : ?>
@@ -90,7 +90,7 @@ get_header(); ?>
 			
 						<?php endwhile; ?>
 			
-						<?php upbootwp_content_nav( 'nav-below' ); ?>
+						<?php /*upbootwp_content_nav( 'nav-below' );*/ ?>
 			
 					<?php else : ?>
 			
@@ -102,7 +102,7 @@ get_header(); ?>
 				</section><!-- #primary -->
 			</div><!-- .col-md-8 -->
 			
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<?php get_sidebar(); ?>
 			</div><!-- .col-md-4 -->
 		</div><!-- .row -->

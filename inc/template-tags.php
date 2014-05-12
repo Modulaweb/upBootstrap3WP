@@ -31,33 +31,34 @@ function upbootwp_content_nav($nav_id) {
 	$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
 
 	?>
+	<div class="well">
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
 		<h4 class="screen-reader-text"><?php _e( 'Post navigation', 'upbootwp' ); ?></h4>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 		
 		<div class="row">
-			<div class="col-md-4">
-				<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'upbootwp' ) . '</span> %title' ); ?>
+			<div class="col-md-6">
+				<?php previous_post_link( '%link', '<span class="glyphicon glyphicon-chevron-left"></span> %title' ); ?>
 			</div><!-- .col-md-4 -->
-			<div class="col-md-4 col-nav-next">
-				<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'upbootwp' ) . '</span>' ); ?>
+			<div class="col-md-6 col-nav-next">
+				<?php next_post_link( '%link', '%title <span class="glyphicon glyphicon-chevron-right"></span>' ); ?>
 			</div><!-- .col-md-4 -->
 		</div><!-- .row -->
 
 	<?php elseif ($wp_query->max_num_pages > 1 && (is_home() || is_archive() || is_search())) : // navigation links for home, archive, and search pages ?>
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-6">
 			
 				<?php if (get_next_posts_link()) : ?>
-				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'upbootwp' ) ); ?></div>
+				<div class="nav-previous"><?php next_posts_link( __( '<span class="glyphicon glyphicon-chevron-left"></span> Older posts', 'upbootwp' ) ); ?></div>
 				<?php endif; ?>
 				
 			</div><!-- .col-md-4 -->
-			<div class="col-md-4 col-nav-next">
+			<div class="col-md-6 col-nav-next">
 			
 				<?php if (get_previous_posts_link()) : ?>
-				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'upbootwp' ) ); ?></div>
+				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="glyphicon glyphicon-chevron-right"></span>', 'upbootwp' ) ); ?></div>
 				<?php endif; ?>
 				
 			</div><!-- .col-md-4 -->
@@ -65,7 +66,8 @@ function upbootwp_content_nav($nav_id) {
 
 	<?php endif; ?>
 
-	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
+	</nav>
+	</div><!-- #<?php echo esc_html( $nav_id ); ?> -->
 	<?php
 }
 endif; // upbootwp_content_nav
@@ -89,7 +91,7 @@ function upbootwp_comment( $comment, $args, $depth ) {
 	<?php else : ?>
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
-		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body well well-xs">
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
 					<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
@@ -188,22 +190,15 @@ if ( ! function_exists( 'upbootwp_posted_on' ) ) :
  */
 function upbootwp_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) )
-		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
+		esc_html( get_the_date() )
 	);
 
 	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'upbootwp' ),
-		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
-			esc_url( get_permalink() ),
-			esc_attr( get_the_time() ),
-			$time_string
-		),
+		$time_string
+		,
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( __( 'View all posts by %s', 'upbootwp' ), get_the_author() ) ),

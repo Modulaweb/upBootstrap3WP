@@ -17,6 +17,11 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootsy.min.css">
+<style>
+/* custom for modulaweb */
+#home-nav{padding-top:10px}#home-nav img{height:28px;}
+</style>
 </head>
 
 <body <?php body_class(); ?>>
@@ -35,7 +40,14 @@
 					            <span class="icon-bar"></span>
 							</button>
 				            
-				            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"  class="navbar-brand"><?php bloginfo( 'name' ); ?></a>
+				            <a id="home-nav" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"  class="navbar-brand"><?php
+				             $img = get_header_image();
+				             if ($img == '') {
+				             	bloginfo( 'name' ); 
+				             } else {
+				             	?><img src="<?php echo $img; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php
+				             }
+				            ?></a>
 				            
 				        </div>
 						
@@ -48,6 +60,14 @@
 			                          'walker' => new Upbootwp_Walker_Nav_Menu()); 
 						wp_nav_menu($args);
 						?>
+						<script type="text/html" id="social-nav-html">
+							<ul id="social-nav" class="nav navbar-nav navbar-right">
+								<li><a href="https://twitter.com/Modulaweb" title="Twitter">		<span class="icon-twitter"></span>		<span class="visible-xs"> Twitter</span></a></li>
+								<li><a href="http://fb.me/modulaweb" title="Facebook">				<span class="icon-facebook"></span>		<span class="visible-xs"> Facebook</span></a></li>
+								<li><a href="https://plus.google.com/+ModulawebFr" title="Google+">	<span class="icon-googleplus"></span>	<span class="visible-xs"> Google+</span></a></li>
+								<li><a href="https://github.com/Modulaweb" title="GitHub">			<span class="icon-github"></span>		<span class="visible-xs"> GitHub</span></a></li>
+							</ul>
+						</script>
 					</div><!-- .col-md-12 -->
 				</div><!-- row -->
 			</div><!-- container -->

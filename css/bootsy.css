@@ -1,0 +1,110 @@
+.visible-print,tr.visible-print,th.visible-print,td.visible-print {
+	display:none!important;
+}
+
+@media print {
+	.visible-print {
+		display:block!important;
+	}
+	
+	table.visible-print {
+		display:table;
+	}
+	
+	tr.visible-print {
+		display:table-row!important;
+	}
+	
+	th.visible-print,td.visible-print {
+		display:table-cell!important;
+	}
+	
+	.hidden-print,tr.hidden-print,th.hidden-print,td.hidden-print {
+		display:none!important;
+	}
+}
+
+#content {
+	padding:60px 0 20px;
+}
+
+.widget ul li {
+	list-style:none;
+}
+
+.col-nav-next {
+	float:right;
+}
+
+#submit {
+	display:inline-block;
+	padding:6px 12px;
+	margin-bottom:0;
+	font-size:14px;
+	font-weight:400;
+	line-height:1.428571429;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	border:1px solid transparent;
+	border-radius:4px;
+	white-space:nowrap;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+}
+
+#submit:focus {
+	outline:thin dotted;
+	outline:5px auto -webkit-focus-ring-color;
+	outline-offset:-2px;
+}
+
+#submit:hover,#submit:focus {
+	color:#333;
+	text-decoration:none;
+}
+
+#submit:active,#submit.active {
+	outline:0;
+	background-image:none;
+	-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);
+	box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);
+}
+
+#submit.disabled,#submit[disabled],fieldset[disabled] #submit {
+	cursor:not-allowed;
+	pointer-events:none;
+	opacity:.65;
+	filter:alpha(opacity=65);
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+#submit {
+	color:#333;
+	background-color:#fff;
+	border-color:#ccc;
+}
+
+#submit:hover,#submit:focus,#submit:active,#submit.active,.open .dropdown-toggle#submit {
+	color:#333;
+	background-color:#ebebeb;
+	border-color:#adadad;
+}
+
+#submit:active,#submit.active,.open .dropdown-toggle#submit {
+	background-image:none;
+}
+
+#submit.disabled,#submit[disabled],fieldset[disabled] #submit,#submit.disabled:hover,#submit[disabled]:hover,fieldset[disabled] #submit:hover,#submit.disabled:focus,#submit[disabled]:focus,fieldset[disabled] #submit:focus,#submit.disabled:active,#submit[disabled]:active,fieldset[disabled] #submit:active,#submit.disabled.active,#submit[disabled].active,fieldset[disabled] #submit.active {
+	background-color:#fff;
+	border-color:#ccc;
+}
+
+#submit .badge {
+	color:#fff;
+	background-color:#fff;
+}
