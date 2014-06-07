@@ -16,6 +16,17 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<meta name="alexaVerifyID" content="OBYJuPjjkiycuJRI9zB8uwFaoCs" />
+
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon-57x57-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon-precomposed.png">
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss2_url'); ?>">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="<?php bloginfo('atom_url'); ?>">
+
 <?php wp_head(); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootsy.min.css">
 <style>

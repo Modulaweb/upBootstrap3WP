@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bootsy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-10 04:59+0200\n"
-"PO-Revision-Date: 2014-05-10 05:07+0100\n"
+"POT-Creation-Date: 2014-05-13 17:38+0200\n"
+"PO-Revision-Date: 2014-05-13 17:40+0100\n"
 "Last-Translator: jeff_ <jeff@modulaweb.fr>\n"
 "Language-Team: Jean-François Vial <jeff@modulaweb.fr>\n"
 "Language: fr\n"
@@ -422,7 +422,7 @@ msgstr ""
 "<span class=\"posted-on\">Publié le %1$s</span><span class=\"byline\"> par "
 "%2$s</span>"
 
-#: functions.php:222
+#: functions.php:222 functions.php:245
 msgid "Page"
 msgstr "Page"
 
@@ -552,11 +552,11 @@ msgstr "Articles publiés au mois de %s"
 msgid "Year: %s"
 msgstr "Articles publiés en %s"
 
-#: functions.php:287
+#: functions.php:287 functions.php:311
 msgid "Social things"
 msgstr "Résaux sociaux"
 
-#: functions.php:298
+#: functions.php:298 functions.php:322
 #, php-format
 msgid "Will be prepended by %1$s"
 msgstr "Sera précédé par %1$s dans les liens"
@@ -589,3 +589,171 @@ msgid "Newer posts <span class=\"glyphicon glyphicon-chevron-right\"></span>"
 msgstr ""
 "Articles plus récents <span class=\"glyphicon glyphicon-chevron-right\"></"
 "span>"
+
+#: comments.php:30
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "Un commentaire à propos de &ldquo;%2$s&rdquo;"
+
+#: functions.php:419 contact.php:91
+msgid "Your name"
+msgstr "Votre nom"
+
+#: functions.php:421 functions.php:427 functions.php:462 functions.php:463
+msgid "required"
+msgstr "obligatoire"
+
+#: functions.php:425 contact.php:90
+msgid "Your email address"
+msgstr "Votre adresse email"
+
+#: functions.php:431
+msgid "Your phone number"
+msgstr "Votre numéro de téléphone"
+
+#: functions.php:437
+msgid "Your company name"
+msgstr "Entité que vous représentez"
+
+#: functions.php:443
+msgid "Your company website"
+msgstr "Site web"
+
+#: functions.php:449 contact.php:92
+msgid "Your message category"
+msgstr "La catégorie du message"
+
+#: functions.php:451 functions.php:452
+msgid "Please, choose one, it is required"
+msgstr "Veuillez choisir une catégorie (obligatoire)"
+
+#: functions.php:452 functions.php:453
+msgid "Partnership"
+msgstr "Partenariat"
+
+#: functions.php:453 functions.php:454
+msgid "About the blog"
+msgstr "À propos du blog"
+
+#: functions.php:454 functions.php:455
+msgid "Hiring"
+msgstr "Travailler"
+
+#: functions.php:454 functions.php:455
+msgid "Hire Modulaweb"
+msgstr "Travailler avec vous"
+
+#: functions.php:455 functions.php:456
+msgid "Misc"
+msgstr "Divers"
+
+#: functions.php:460
+msgid "Your message object"
+msgstr "L'objet de votre message"
+
+#: functions.php:466 contact.php:94 functions.php:467
+msgid "Your message"
+msgstr "Votre message"
+
+#: functions.php:469
+msgid "Hi,"
+msgstr "Bonjour,"
+
+#: functions.php:477 functions.php:474 functions.php:475
+msgid "Send this message"
+msgstr "Envoyer ce message"
+
+#: functions.php:73
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:81
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:89
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:460 contact.php:93 functions.php:461
+msgid "Your message subject"
+msgstr "L'objet de votre message"
+
+#: functions.php:489 functions.php:486
+msgid "Please wait…"
+msgstr "Veuillez patienter…"
+
+#: functions.php:489 functions.php:486
+msgid "Your message is on his way…"
+msgstr "Votre message est en cours de traitement…"
+
+#: functions.php:503 functions.php:500
+msgid "Message sent"
+msgstr "Message envoyé"
+
+#: functions.php:503 functions.php:500
+msgid "Your message has been sent. It will be answered shortly."
+msgstr ""
+"Votre message a été envoyé. Vous recevrez une réponse très prochainement."
+
+#: functions.php:514 functions.php:511
+msgid "Something really bad happened"
+msgstr "Quelque chose s'est mal passé"
+
+#: functions.php:514 functions.php:511
+msgid ""
+"Your message has not been sent due to some technical problem… how "
+"embarrassing it is… try to contact us by phone."
+msgstr ""
+"Votre message n'a pas été envoyé semble-t-il à cause d'un problème "
+"technique… c'est très embarassant… essayez de nous contacter par téléphone."
+
+#: functions.php:524 functions.php:521
+msgid "You must correct some fields before to resend"
+msgstr "Vous devez corriger certains champs avant de renvoyer votre message"
+
+#: contact.php:97
+msgid "Please verify or fill the following fields:"
+msgstr "Veuillez vérifier ou remplir les champs suivants:"
+
+#: contact.php:127
+msgid "Askismet think its spam."
+msgstr "Askismet pense que ce message est un spam"
+
+#: contact.php:132
+#, php-format
+msgid "Message sent from the %1$s website contact form"
+msgstr "Message envoyé depuis le formulaire de contact du site %1$s"
+
+#: contact.php:133
+#, php-format
+msgid ""
+"Message sent at %1$s from <a href=\\\"%2$s\\\">%3$s</a> (<a href=\\\"http://"
+"%1$s\\\">%1$s</a>)"
+msgstr ""
+"Envoyé à %1$s depuis <a href=\\\"%2$s\\\">%3$s</a> (<a href=\\\"http://%1$s\\"
+"\">%1$s</a>)"
+
+#: contact.php:135
+msgid "Message author"
+msgstr "Auteur du message"
+
+#: contact.php:137
+msgid "Phone:"
+msgstr "Téléphone:"
+
+#: contact.php:138
+msgid "Mail:"
+msgstr "email:"
+
+#: contact.php:140
+msgid "Company:"
+msgstr "Société:"
+
+#: contact.php:142
+msgid "Website:"
+msgstr "Site web"
+
+#: contact.php:144
+msgid "Message:"
+msgstr "Message:"

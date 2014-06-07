@@ -343,7 +343,7 @@ function Bootsy_social_links_get ($user_ID){
 		$vars['value'] = get_user_meta($user_ID, $id);
 		if (is_array($vars['value'])) $vars['value'] = $vars['value'][0];
 		if (trim($vars['value']) !== '') {
-			$return .= '<li><a href="'.$vars['prepend'].$vars['value'].'" rel="author"><span class="icon-'.$id.'"></span> <span class="text-hide">'.$vars['label'].'</span></a></li>';
+			$return .= '<li><a href="'.$vars['prepend'].$vars['value'].'" rel="author publisher"><span class="icon-'.$id.'"></span> <span class="text-hide">'.$vars['label'].'</span></a></li>';
 		}
     }
     return $return.'</ul>';
@@ -410,5 +410,142 @@ function Bootsy_adjacent_post_link( $format, $link ) {
 add_filter( 'previous_post_link', 'Bootsy_adjacent_post_link', 10, 2 );
 add_filter( 'next_post_link', 'Bootsy_adjacent_post_link', 10, 2 );
 
+// Bootstrapped contact form
+function Bootsy_contact( $attr, $content, $tag ) {
+	ob_start();
+	?>
+	<form method="POST" id="contact_form" action="<?php echo get_template_directory_uri(); ?>/contact.php" class="form-horizontal" role="form">
+		<div class="form-group">
+			<label for="name" class="col-sm-4 control-label"><?php _e('Your name', 'upbootwp'); ?></label>
+			<div class="col-sm-8">
+				<input type="text" name="name" id="name" class="form-control" placeholder="<?php _e('required', 'upbootwp') ; ?>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="email" class="col-sm-4 control-label"><?php _e('Your email address', 'upbootwp'); ?></label>
+			<div class="col-sm-8">
+				<input type="email" name="email" id="email" class="form-control" placeholder="<?php _e('required', 'upbootwp') ; ?>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="phone" class="col-sm-4 control-label"><?php _e('Your phone number', 'upbootwp'); ?></label>
+			<div class="col-sm-8">
+				<input type="text" name="phone" id="phone" class="form-control" placeholder="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="struct" class="col-sm-4 control-label"><?php _e('Your company name', 'upbootwp'); ?></label>
+			<div class="col-sm-8">
+				<input type="text" name="struct" id="struct" class="form-control" placeholder="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="url" class="col-sm-4 control-label"><?php _e('Your company website', 'upbootwp'); ?></label>
+			<div class="col-sm-8">
+				<input type="text" name="url" id="url" class="form-control" placeholder="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="subject1" class="col-sm-4 control-label"><?php _e('Your message category', 'upbootwp'); ?></label>
+			<div class="col-sm-8">
+				<select name="subject1" id="subject1" class="form-control">
+					<option selected="selected" disabled="disabled"><?php _e('Please, choose one, it is required', 'upbootwp'); ?></option>
+					<option value="<?php _e('Partnership', 'upbootwp'); ?>"><?php _e('Partnership', 'upbootwp'); ?></option>
+					<option value="<?php _e('About the blog', 'upbootwp'); ?>"><?php _e('About the blog', 'upbootwp'); ?></option>
+					<option value="<?php _e('Hiring', 'upbootwp'); ?>"><?php _e('Hire Modulaweb', 'upbootwp'); ?></option>
+					<option value="<?php _e('Misc', 'upbootwp'); ?>"><?php _e('Misc', 'upbootwp'); ?></option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="subject2" class="col-sm-4 control-label"><?php _e('Your message subject', 'upbootwp'); ?></label>
+			<div class="col-sm-8">
+				<input type="text" name="subject2" id="subject2" class="form-control" placeholder="<?php _e('required', 'upbootwp') ; ?>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="msg" class="col-sm-4 control-label"><?php _e('Your message', 'upbootwp'); ?></label>
+			<div class="col-sm-8">
+				<textarea type="text" name="msg" id="msg" class="form-control" rows="8"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-8">
+				<button id="submit_contact_form" type="submit" class="btn btn-primary col-sm-12"><span class="glyphicon glyphicon-envelope"></span> <?php _e('Send this message', 'upbootwp'); ?></button>
+			</div>
+		</div>
+	</form>
+	<div id="callout" class="bs-callout bs-callout-info" style="display:none">
+	</div>
+	<script>
+	$(function(){
+		$('#contact_form').submit(function(e){
+			e.preventDefault();
+			$('#submit_contact_form').attr('disabled', true);
+			$('#callout')
+				.html('<h4><?php echo str_replace("'","\'", __('Please wait…', 'upbootwp') );?></h4><p><?php echo str_replace("'","\'", __('Your message is on his way…', 'upbootwp') );?></p><div class="progress progress-striped active"><div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>')
+				.removeClass('bs-callout-warning')
+				.removeClass('bs-callout-danger')
+				.addClass('bs-callout-info')
+				.show('400')
+			;
+			var form = $(this).serialize();
+			console.log(form);
+			var action = $(this).attr('action');
+			console.log(action);
+			$.post(action, form).done(function(response){
+				switch(response) {
+					case 'ok':
+						$('#callout')
+							.html('<h4><?php echo str_replace("'","\'", __('Message sent', 'upbootwp') );?></h4><p><?php echo str_replace("'","\'", __('Your message has been sent. It will be answered shortly.', 'upbootwp') );?></p>')
+							.removeClass('bs-callout-warning')
+							.removeClass('bs-callout-danger')
+							.removeClass('bs-callout-info')
+							.addClass('bs-callout-success')
+							.show('400')
+						;
+						$('#contact_form').hide('400');
+						break;
+					case 'nok': 
+						$('#callout')
+							.html('<h4><?php echo str_replace("'","\'", __('Something really bad happened', 'upbootwp') );?></h4><p><?php echo str_replace("'","\'", __('Your message has not been sent due to some technical problem… how embarrassing it is… try to contact us by phone.', 'upbootwp') );?></p>')
+							.removeClass('bs-callout-warning')
+							.removeClass('bs-callout-info')
+							.addClass('bs-callout-danger')
+							.show('400')
+						;
+						$('#contact_form').hide('400',function(){$(this).remove();});
+						break;
+					default:
+						$('#callout')
+							.html('<h4><?php echo str_replace("'","\'", __('You must correct some fields before to resend', 'upbootwp') );?></h4><p>'+response+'</p>')
+							.removeClass('bs-callout-danger')
+							.removeClass('bs-callout-info')
+							.addClass('bs-callout-warning')
+							.show('400')
+						;
+						$('#submit_contact_form').attr('disabled', false);
+				}
+			});
+		});
+	});
+	</script>
+	<?php
+	return ob_get_clean();
+}
 
+add_shortcode( 'bootsy_contact', 'Bootsy_contact' );
+
+function Bootsty_next_posts_link_attributes() {
+    return 'class="btn btn-primary"';
+
+}
+add_filter('next_posts_link_attributes', 'Bootsty_next_posts_link_attributes');
+
+function Bootsty_previous_posts_link_attributes() {
+    return 'class="btn btn-primary pull-right"';
+}
+
+add_filter('previous_posts_link_attributes', 'Bootsty_previous_posts_link_attributes');
 ?>

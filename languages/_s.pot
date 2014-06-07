@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-10 05:02+0200\n"
+"POT-Creation-Date: 2014-05-13 17:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: 404.php:15 404.php:19
+#: 404.php:15 404.php:19 404.php:19
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:19 404.php:23
+#: 404.php:19 404.php:23 404.php:23
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: 404.php:27 404.php:31
+#: 404.php:27 404.php:31 404.php:31
 msgid "Most Used Categories"
 msgstr ""
 
@@ -62,28 +62,28 @@ msgstr ""
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: archive.php:48 archive.php:51
+#: archive.php:48 archive.php:51 archive.php:51
 msgid "Asides"
 msgstr ""
 
-#: archive.php:51 archive.php:54
+#: archive.php:51 archive.php:54 archive.php:54
 msgid "Images"
 msgstr ""
 
-#: archive.php:54 archive.php:57
+#: archive.php:54 archive.php:57 archive.php:57
 msgid "Videos"
 msgstr ""
 
-#: archive.php:57 archive.php:60
+#: archive.php:57 archive.php:60 archive.php:60
 msgid "Quotes"
 msgstr ""
 
-#: archive.php:60 archive.php:63
+#: archive.php:60 archive.php:63 archive.php:63
 msgid "Links"
 msgstr ""
 
 #: archive.php:63 sidebar.php:17 sidebar.php:28 archive.php:66 sidebar.php:41
-#: sidebar.php:47
+#: sidebar.php:47 archive.php:66
 msgid "Archives"
 msgstr ""
 
@@ -95,6 +95,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: comments.php:36 comments.php:56 comments.php:37 comments.php:57
+#: comments.php:37 comments.php:57
 msgid "Comment navigation"
 msgstr ""
 
@@ -106,7 +107,7 @@ msgstr ""
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:68 comments.php:69
+#: comments.php:68 comments.php:69 comments.php:69
 msgid "Comments are closed."
 msgstr ""
 
@@ -244,13 +245,13 @@ msgid ""
 "\">Trackback URL</a>."
 msgstr ""
 
-#: image.php:108 image.php:76
+#: image.php:108 image.php:76 image.php:76
 msgid ""
 "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
 "\" title=\"Post a comment\">post a comment</a>."
 msgstr ""
 
-#: image.php:110 image.php:78
+#: image.php:110 image.php:78 image.php:78
 msgid "Both comments and trackbacks are currently closed."
 msgstr ""
 
@@ -260,6 +261,7 @@ msgid "Page %s"
 msgstr ""
 
 #: inc/template-tags.php:34 inc/template-tags.php:35 inc/template-tags.php:36
+#: inc/template-tags.php:36
 msgid "Post navigation"
 msgstr ""
 
@@ -282,6 +284,7 @@ msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: inc/template-tags.php:71 inc/template-tags.php:86 inc/template-tags.php:88
+#: inc/template-tags.php:88
 msgid "Pingback:"
 msgstr ""
 
@@ -296,7 +299,7 @@ msgid "%1$s at %2$s"
 msgstr ""
 
 #: inc/template-tags.php:94 inc/template-tags.php:109
-#: inc/template-tags.php:111
+#: inc/template-tags.php:111 inc/template-tags.php:111
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -314,7 +317,7 @@ msgstr ""
 msgid "View all posts by %s"
 msgstr ""
 
-#: no-results.php:13 no-results.php:14
+#: no-results.php:13 no-results.php:14 no-results.php:14
 msgid "Nothing Found"
 msgstr ""
 
@@ -324,13 +327,13 @@ msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: no-results.php:23 no-results.php:24
+#: no-results.php:23 no-results.php:24 no-results.php:24
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: no-results.php:28 no-results.php:29
+#: no-results.php:28 no-results.php:29 no-results.php:29
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -391,7 +394,7 @@ msgid ""
 "%2$s</span>"
 msgstr ""
 
-#: functions.php:222
+#: functions.php:222 functions.php:245
 msgid "Page"
 msgstr ""
 
@@ -505,11 +508,11 @@ msgstr ""
 msgid "Year: %s"
 msgstr ""
 
-#: functions.php:287
+#: functions.php:287 functions.php:311 functions.php:311
 msgid "Social things"
 msgstr ""
 
-#: functions.php:298
+#: functions.php:298 functions.php:322
 #, php-format
 msgid "Will be prepended by %1$s"
 msgstr ""
@@ -519,15 +522,15 @@ msgstr ""
 msgid "Other posts from %1$s"
 msgstr ""
 
-#: sidebar.php:13 sidebar.php:17
+#: sidebar.php:13 sidebar.php:17 sidebar.php:17
 msgid "About the author"
 msgstr ""
 
-#: sidebar.php:20 sidebar.php:24
+#: sidebar.php:20 sidebar.php:24 sidebar.php:24
 msgid "<span class=\"glyphicon glyphicon-user\"></span> Other posts"
 msgstr ""
 
-#: sidebar.php:38
+#: sidebar.php:38 sidebar.php:38
 msgid "License"
 msgstr ""
 
@@ -542,4 +545,163 @@ msgstr ""
 #: comments.php:30
 #, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+#: functions.php:419 contact.php:91 functions.php:419
+msgid "Your name"
+msgstr ""
+
+#: functions.php:421 functions.php:427 functions.php:462 functions.php:421
+#: functions.php:427 functions.php:463
+msgid "required"
+msgstr ""
+
+#: functions.php:425 contact.php:90 functions.php:425
+msgid "Your email address"
+msgstr ""
+
+#: functions.php:431 functions.php:431
+msgid "Your phone number"
+msgstr ""
+
+#: functions.php:437 functions.php:437
+msgid "Your company name"
+msgstr ""
+
+#: functions.php:443 functions.php:443
+msgid "Your company website"
+msgstr ""
+
+#: functions.php:449 contact.php:92 functions.php:449
+msgid "Your message category"
+msgstr ""
+
+#: functions.php:451 functions.php:452
+msgid "Please, choose one, it is required"
+msgstr ""
+
+#: functions.php:452 functions.php:453
+msgid "Partnership"
+msgstr ""
+
+#: functions.php:453 functions.php:454
+msgid "About the blog"
+msgstr ""
+
+#: functions.php:454 functions.php:455
+msgid "Hiring"
+msgstr ""
+
+#: functions.php:454 functions.php:455
+msgid "Hire Modulaweb"
+msgstr ""
+
+#: functions.php:455 functions.php:456
+msgid "Misc"
+msgstr ""
+
+#: functions.php:460
+msgid "Your message object"
+msgstr ""
+
+#: functions.php:466 contact.php:94 functions.php:467
+msgid "Your message"
+msgstr ""
+
+#: functions.php:469
+msgid "Hi,"
+msgstr ""
+
+#: functions.php:477 functions.php:474 functions.php:475
+msgid "Send this message"
+msgstr ""
+
+#: functions.php:73
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:81
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:89
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:460 contact.php:93 functions.php:461
+msgid "Your message subject"
+msgstr ""
+
+#: functions.php:489 functions.php:486
+msgid "Please wait…"
+msgstr ""
+
+#: functions.php:489 functions.php:486
+msgid "Your message is on his way…"
+msgstr ""
+
+#: functions.php:503 functions.php:500
+msgid "Message sent"
+msgstr ""
+
+#: functions.php:503 functions.php:500
+msgid "Your message has been sent. It will be answered shortly."
+msgstr ""
+
+#: functions.php:514 functions.php:511
+msgid "Something really bad happened"
+msgstr ""
+
+#: functions.php:514 functions.php:511
+msgid ""
+"Your message has not been sent due to some technical problem… how "
+"embarrassing it is… try to contact us by phone."
+msgstr ""
+
+#: functions.php:524 functions.php:521
+msgid "You must correct some fields before to resend"
+msgstr ""
+
+#: contact.php:97
+msgid "Please verify or fill the following fields:"
+msgstr ""
+
+#: contact.php:127
+msgid "Askismet think its spam."
+msgstr ""
+
+#: contact.php:132
+#, php-format
+msgid "Message sent from the %1$s website contact form"
+msgstr ""
+
+#: contact.php:133
+#, php-format
+msgid ""
+"Message sent at %1$s from <a href=\\\"%2$s\\\">%3$s</a> (<a href=\\\"http://"
+"%1$s\\\">%1$s</a>)"
+msgstr ""
+
+#: contact.php:135
+msgid "Message author"
+msgstr ""
+
+#: contact.php:137
+msgid "Phone:"
+msgstr ""
+
+#: contact.php:138
+msgid "Mail:"
+msgstr ""
+
+#: contact.php:140
+msgid "Company:"
+msgstr ""
+
+#: contact.php:142
+msgid "Website:"
+msgstr ""
+
+#: contact.php:144
+msgid "Message:"
 msgstr ""

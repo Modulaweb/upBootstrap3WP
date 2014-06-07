@@ -33,7 +33,12 @@
 
 <?php wp_footer(); ?>
 <script>
-	$(function(){$('#main-menu').parent().append($('#social-nav-html').html());});
+	$(function(){$('#main-menu').parent().append($('#social-nav-html').html());
+var $footer=$('#page-footer');var footerO=$footer.offset();
+if(footerO.top+$footer.height()<$(window).height()){
+	$footer.css({bottom:0,position:'absolute',width:'100%'});
+};
+});
 </script>
 </body>
 </html>

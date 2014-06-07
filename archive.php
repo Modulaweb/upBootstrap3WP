@@ -90,7 +90,7 @@ get_header(); ?>
 			
 						<?php endwhile; ?>
 			
-						<?php /*upbootwp_content_nav( 'nav-below' );*/ ?>
+						<?php upbootwp_content_nav( 'nav-below' ); ?>
 			
 					<?php else : ?>
 			

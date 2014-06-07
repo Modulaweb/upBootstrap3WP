@@ -14,7 +14,7 @@ get_header(); ?>
 				<div id="primary" class="content-area">
 					<main id="main" class="site-main" role="main">
 			
-						<section class="error-404 not-found">
+						<section class="error-404 not-found well">
 							<header class="page-header">
 								<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'upbootwp' ); ?></h1>
 							</header><!-- .page-header -->
@@ -23,7 +23,7 @@ get_header(); ?>
 								<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'upbootwp' ); ?></p>
 			
 								<?php get_search_form(); ?>
-			
+								<hr>
 								<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 			
 								<?php if ( upbootwp_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
@@ -45,8 +45,8 @@ get_header(); ?>
 			
 								<?php
 								/* translators: %1$s: smiley */
-								$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'upbootwp' ), convert_smilies( ':)' ) ) . '</p>';
-								the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+								$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'upbootwp' ), '' ) . '</p>';
+								the_widget( 'WP_Widget_Archives', '', "after_title=</h2>$archive_content" );
 								?>
 			
 								<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
